@@ -4,7 +4,7 @@ h3,
 h4,
 h5,
 h6 {
-  //@include font("b");
+  @include font;
   text-transform: uppercase;
   color: #fff;
   text-align: center;
@@ -30,13 +30,13 @@ h6 {
 }
 
 p {
-  //@include font;
+  @include font;
   font-size: rem(16px);
   color: #fff;
 }
 
 ul {
-  //@include font;
+  @include font;
   color: #fff;
   padding: 0;
   margin: 0;
@@ -59,7 +59,7 @@ img {
 }
 
 button {
-  //@include resetBtn;
+  @include resetBtn;
 }
 
 .typograph-page {

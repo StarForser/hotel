@@ -1,0 +1,25 @@
+.room {
+
+  &__block {
+    @include col;
+    @include size(12);
+    @include display(row);
+    flex-wrap: wrap;
+  }
+}
+
+.room__block-preview {
+  flex-basis: 50%;
+  flex-grow: 1;
+  background-image: url("../images/room/room1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.room__block-description {
+  flex-basis: 50%;
+  flex-grow: 1;
+  min-height: 400px;
+  background-color: #fff;
+}

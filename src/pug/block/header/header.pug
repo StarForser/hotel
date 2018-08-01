@@ -1,29 +1,63 @@
 header.header
-  .header__triangle-wrap
-    <svg class="header__triange" version="1.1"  width="100%" height="20%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"xml:space="preserve" viewBox="0 0 100 100" preserveAspectRatio="none" >
-      <polygon fill=#ccc points="-18,100 100,0 100,100"/>
-    </svg>
-  .grid-wrapper
-    .grid-row
+  .grid-wrapper.grid-wrapper--z.grid-wrapper--stretch
+    .grid-row.grid-row--stretch
       .header__info
+
         button.button Бронирование
       nav.menu
+        a(href="#").logo
+          img(src="./images/logo.svg", alt="")
         ul.menu__block
-          each value in ["ГЛАВНАЯ,НОМЕРА,УСЛУГИ,ГАЛЕРЕЯ,ОТЗЫВЫ,КОНТАКТЫ"]
+          each value in ["ГЛАВНАЯ","НОМЕРА","УСЛУГИ","ГАЛЕРЕЯ","ОТЗЫВЫ","КОНТАКТЫ"]
             li.menu__item
               a.menu__link=value
-      h1.header__title ВИЛЛА РЕНЕССАНС
-        span.header__title-subtitle ОТДЫХ В АЛУШТЕ
-      section.discount
-        h2.discount__title Скидка при раннем бронировании
-      h3.header__subtitle Лучшая цена гарантирована
-        span.header__subtitle просто какой то текст
+      h1.header__title 
+        span.header__title-big РЕНЕССАНС
+        span.header__title-subtitle ОТДЫХ В АЛУШТЕ НА ВИЛЛЕ
+      include ./bloks/more.pug
+      h3.header__subtitle 
+        span.header__subtitle-text Лучшая цена гарантирована
+        span.header__subtitle-text.header__subtitle-text--low просто какой то текст
       .header__features
-        .header__features-preview
-          img(src="", alt="")
-        span.header__features-title название блока
-        .header__features-info
-          a(href="").header__features-link
-            span.
+        .header__features-item
+          .header__features-preview
+            img(src="./images/features.jpg", alt="").header__features-image
+          span.header__features-title ЧИСТЫЕ КОМНАТЫ
+          .header__features-info
+            a(href="").header__features-link
+              span.header__features-text Описание краткое
+              span.header__features-text подзаголовок краткий
+              +svg("icon-features","arrow")
+        .header__features-item
+          .header__features-preview
+            img(src="./images/features1.jpg", alt="").header__features-image
+          span.header__features-title Открытый бассеин
+          .header__features-info
+            a(href="").header__features-link
+              span.header__features-text Описание краткое
+              span.header__features-text подзаголовок краткий
+              +svg("icon-features","arrow")
+        .header__features-item
+          .header__features-preview
+            img(src="./images/features2.jpg", alt="").header__features-image
+          span.header__features-title ХОРОШАЯ КУХНЯ
+          .header__features-info
+            a(href="").header__features-link
+              span.header__features-text Описание краткое
+              span.header__features-text подзаголовок краткий
+              +svg("icon-features","arrow")
+        .header__features-item
+          .header__features-preview
+            img(src="./images/features3.jpg", alt="").header__features-image
+          span.header__features-title БОЛЬШИЕ НОМЕРА
+          .header__features-info
+            a(href="").header__features-link
+              span.header__features-text Описание краткое
+              span.header__features-text подзаголовок краткий
+              +svg("icon-features","arrow")
+  .header__triangle-wrap
+    <svg class="header__triange" version="1.1"  width="100%" height="20%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"xml:space="preserve" viewBox="0 0 100 100" preserveAspectRatio="none" >
+      <polygon fill=#f6f6f6 points="-18,100 100,0 100,100"/>
+    </svg>
 
 

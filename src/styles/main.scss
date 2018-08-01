@@ -16,7 +16,7 @@
 
 html {
   height: 100%;
-color: red;
+
 }
 
 body {
@@ -26,15 +26,28 @@ body {
 }
 
 .wrapper {
- @include display(column);
- flex-grow: 1;
- min-width: 100%;
+  @include display(column);
+  flex-grow: 1;
+  min-width: 100%;
+  background-color: #f6f6f6;
 }
 
 .grid-wrapper {
   @include wrapper;
+  &--z {
+    position: relative;
+    z-index: 1;
+  }
+  &--stretch {
+    @include display;
+    flex-grow: 1;
+  }
 }
 
 .grid-row {
   @include row-flex;
+  &--stretch {
+    flex-direction: column;
+    flex-grow: 1;
+  }
 }

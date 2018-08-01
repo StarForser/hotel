@@ -1,0 +1,75 @@
+.more {
+  @include col;
+  @include size(12);
+  @include display(row,center,center);
+  flex-wrap: wrap;
+  padding: 0 $paddingBlock;
+  background-color: rgba($colorGold, 0.7);
+  min-height: 150px;
+  margin-bottom: $marginSection;
+  &__title {
+    flex-basis: 20%;
+    @include font();
+    font-size: 26px;
+  }
+  &__block {
+    min-width: 150px;
+    text-align: center;
+    margin-right: $marginSection;
+    position: relative;
+    &-wrap {
+      padding: $paddingBlock;
+      @include display(column);
+      background-color: #fff;
+
+    }
+    &-title {
+
+      @include font();
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      transform: translate3d(0,-120%,0);
+      text-transform: uppercase;
+      color: #fff;
+      margin-bottom: $marginBlock;
+      margin-top: 0;
+      font-size: 15px;
+    }
+
+  }
+}
+
+.more__block-num {
+  @include font();
+  font-size: 36px;
+  margin-bottom: $marginBlock;
+  color: $colorFontB;
+}
+.more__block-text {
+  @include font();
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #797979;
+}
+
+.more__link {
+  @include display(column);
+  @include font;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #262219;
+  padding: $paddingSection/2 $paddingSection;
+  text-align: center;
+
+  &-title {
+    color: #fff;
+    font-size: 22px;
+    margin-bottom: 5px;
+  }
+  &-subtitle {
+    color: $colorGold;
+    font-size: 14px;
+  }
+}

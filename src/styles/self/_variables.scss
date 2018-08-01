@@ -3,26 +3,25 @@
 }
 
 
-$ffNormal: 'Open Sans Condensed', sans-serif;
-$fwNormal:  300;
+$ffNormal:  'Roboto', sans-serif;
+$fwNormal:  400;
 
-$ffLight: 'Open Sans Condensed', sans-serif;
-$fwLight:  300;
+$ffLight:  'Roboto Slab', serif;
+$fwLight:  400;
 
-$ffBold: 'Open Sans Condensed', sans-serif;
+$ffBold: 'Roboto Slab', serif;
 $fwBold:  700;
 
 $paddingBlock: rem(10px);
+$paddingSection: rem(30px);
 $marginBlock: rem(10px);
+$marginSection: rem(30px);
 
 $colorFontB: rgba(#333333,1);
 $colorFontW: rgba(#fff,1);
 
 
-$colorGray: rgba(#333333,1);
-$colorBg: rgba(#3232f1,1);
-$colorItem: #e06822;
-$colorWhite: rgba(#fff,1);
-$colorHover: #e06822;
+$colorAcent: #3059a9;
+$colorGold: #d2bb89;
 
 

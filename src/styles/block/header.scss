@@ -4,6 +4,28 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  @include display();
+  position: relative;
+  &__title {
+    @include display(column,center);
+    @include col;
+    @include size(12);
+    flex-grow: 1;
+    &-big {
+      font-size: rem(72px);
+    }
+    &-subtitle {
+      @include font;
+      font-size: rem(16px);
+      letter-spacing: 1px;
+    }
+  }
+  &__subtitle {
+    @include col;
+    @include size(12);
+    margin-top: 0;
+    margin-bottom: $marginSection;
+  }
 }
 
 
@@ -21,4 +43,27 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  background: linear-gradient(rgba(#000,0.1)10%, rgba(#000,0.8) 90%)
+}
+
+.header__info {
+  @include col;
+  @include size(12);
+  @include display(row, flex-end);
+  margin-bottom: $marginSection;
+}
+
+.header__subtitle {
+  @include display(column);
+  @include font;
+  font-size: 24px;
+  &-text {
+    letter-spacing: 1px;
+    margin-bottom: $marginBlock;
+    &--low {
+      letter-spacing: 1px;
+      font-size: 16px;
+      color: darken(#fff,25%);
+    }
+  }
 }

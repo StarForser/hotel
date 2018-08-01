@@ -1,0 +1,102 @@
+.description {
+  margin-top: $marginSection;
+  margin-bottom: $marginSection*3;
+  &__title {
+    @include col;
+    @include size(12);
+    @include display(column);
+    letter-spacing: 1px;
+    &-gold {
+      @include font;
+      font-size: 18px;
+      color: $colorGold;
+      margin-bottom: $marginBlock;
+    }
+    &-black {
+      @include font("l");
+      font-size: 28px;
+      color: $colorFontB;
+    }
+  }
+  &__text {
+    @include col;
+    @include size(8);
+    @include shift(2);
+    @include font;
+    color: #848484;
+    text-align: center;
+    margin-bottom: $marginSection;
+    letter-spacing: 1px;
+  }
+}
+
+.banner {
+  @include col;
+  @include size(4);
+  background-image: url("../images/transfer.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0 $paddingSection;
+  &__stick {
+    background-color: #737373;
+    color: #fff;
+    padding: $paddingBlock $paddingSection;
+    z-index: 1;
+  }
+  &__title {
+    z-index: 1;
+    @include font("l")
+  }
+  &__text {
+    z-index: 1;
+    text-align: center;
+    line-height: 24px;
+
+  }
+  &__price {
+    @include display(column);
+    z-index: 1;
+    color: #fff;
+  }
+  &__button {
+    @include font;
+    text-transform: uppercase;
+    font-size: 14px;
+    z-index: 1;
+    color: #fff;
+    padding: $paddingBlock;
+    background-color: $colorGold;
+  }
+  @include bgAbsolute(#000, 0.7);
+  @include display(column,stretch,center);
+
+}
+
+.gallery {
+  @include col;
+  @include size(8);
+  @include size-sm(12);
+  @include display(row);
+  flex-wrap: wrap;
+  &__item {
+    @include display(row,center,center);
+    flex-basis: 50%;
+    margin-bottom: $marginBlock/2;
+    padding-right: $paddingBlock/2;
+    box-sizing: border-box;
+    @include sm-block {
+      flex-basis: 100%;
+      padding-right: 0;
+    }
+    @include xs-block {
+      flex-basis: 100%;
+    }
+    &--mbottom {
+      margin-bottom: 0;
+      @include sm-block {
+        margin-bottom: $marginBlock/2;
+      }
+    }
+  }
+}

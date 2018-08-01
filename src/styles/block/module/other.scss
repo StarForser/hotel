@@ -1,0 +1,14 @@
+.button {
+  @include font;
+  background-color: rgba($colorGold,0.5);
+  color: #fff;
+  border: none;
+  padding: $paddingBlock/2 $paddingBlock*2;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.logo {
+  min-width: 80px;
+  margin-right: auto;
+}
